@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+        <template id="vit_so_barcode" inherit_id="sale.report_saleorder_document">
+
+            <xpath expr="//h2" position="inside">
+                <img t-attf-src="/report/barcode/?type=Code128&amp;value=#{doc.name}&amp;width=400&amp;height=70"/>
+                <img t-attf-src="/report/barcode/?type=QR&amp;value=http://localhost:8010/report/html/sale.report_saleorder/#{doc.id}&amp;width=300&amp;height=300"/>
+            </xpath>
+
+        </template>
+
+
+    </data>
+</openerp>
