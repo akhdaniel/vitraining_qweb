@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template name="rfq_image" inherit_id="purchase.report_purchasequotation_document">
+
+            <xpath expr="//table[@class='table table-condensed']/thead/tr" position="inside">
+                <th>Image</th>
+            </xpath>
+
+
+            <xpath expr="//table[@class='table table-condensed']/tbody/tr/td[@class='text-right']" position="after">
+                <td>
+                    test
+                    <!--<t t-esc="order_line.product_id.id"/>-->
+                </td>
+            </xpath>
+
+        </template>
+
+    </data>
+</openerp>
