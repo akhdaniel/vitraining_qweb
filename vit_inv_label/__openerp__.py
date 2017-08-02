@@ -5,9 +5,15 @@
 		"base",
 		"account"
 	], 
+<<<<<<< HEAD
 	"category": "Accounting",
 	"website": "http://vitraining.com",
 	"author": "akhmad.daniel@gmail.com [vitraining.com]",
+=======
+	"author": "akhmad.daniel@gmail.com [vitraining.com]",
+	"category": "Accounting",
+	"website": "vitraining.com",
+>>>>>>> master
 	"description": """\
 
 Manage
