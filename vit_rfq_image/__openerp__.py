@@ -10,10 +10,13 @@
 	"category": "Purchasing",
 	"description": """\
 
-Manage
+Features
 ======================================================================
 
-Add product image column on RFQ report
+* Add product image column on RFQ report
+* Addons ini adalah bahan praktek pada traning "Odoo QWeb Programming" yang diselenggarakan di vitraining.com dan E-Book "Panduang Lengkap Pemrograman QWeb Odoo v10"
+* Klik http://shop.vitraining.com untuk info lebih lanjut
+
 
 """,
 	"data": [
