@@ -7,17 +7,16 @@
             <xpath expr="//div[@class='page']" position="after">
 
                 <t t-if="o.state=='draft'">
-                    <div style="top:200px;position:absolute;opacity:0.25;width:100%;text-align:center;z-index:1000;">
-                        <img src="/vit_inv_watermark/static/src/img/draft.png"/>
+                    <div style="top:0px;position:absolute;opacity:0.25;width:100%;text-align:center;z-index:1000;">
+                        <img class="img img-responsive" src="/vit_inv_watermark/static/src/img/draft.png"/>
                     </div>
                 </t>
 
                 <t t-if="o.state=='paid'">
-                    <div style="top:200px;position:absolute;opacity:0.25;width:100%;text-align:center;z-index:1000;">
+                    <div style="top:0px;position:absolute;opacity:0.25;width:100%;text-align:center;z-index:1000;">
                         <img src="/vit_inv_watermark/static/src/img/copy.png"/>
                     </div>
                 </t>
-
             </xpath>
 
         </template>

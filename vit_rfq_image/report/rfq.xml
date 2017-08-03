@@ -4,16 +4,35 @@
 
         <template name="rfq_image" inherit_id="purchase.report_purchasequotation_document">
 
-            <xpath expr="//table[@class='table table-condensed']/thead/tr" position="inside">
-                <th>Image</th>
-            </xpath>
-
-
-            <xpath expr="//table[@class='table table-condensed']/tbody/tr/td[@class='text-right']" position="after">
-                <td>
-                    test
-                    <!--<t t-esc="order_line.product_id.id"/>-->
-                </td>
+            <xpath expr="//table[@class='table table-condensed']" position="replace">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th><strong>Description</strong></th>
+                            <th><strong>Image</strong></th>
+                            <th class="text-center"><strong>Expected Date</strong></th>
+                            <th class="text-right"><strong>Qty</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="o.order_line" t-as="order_line">
+                            <td>
+                                <span t-field="order_line.name"/>
+                            </td>
+                            <td>
+                                <img t-att-src="'data:image/jpeg;base64,%s' % order_line.product_id.image"
+                                style="max-height:50px" />
+                            </td>
+                            <td class="text-center">
+                                <span t-field="order_line.date_planned"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-field="order_line.product_qty"/>
+                                <span t-field="order_line.product_uom" groups="product.group_uom"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </xpath>
 
         </template>
